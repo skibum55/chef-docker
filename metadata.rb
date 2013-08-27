@@ -11,6 +11,7 @@ recipe            "docker::binary", "Installs Docker binary"
 recipe            "docker::package", "Installs Docker via package"
 recipe            "docker::source", "Installs Docker via source"
 recipe            "docker::upstart", "Installs/Starts Docker via Upstart"
+recipe            "bitmonk/firewall::default", "Installs, configures and starts UFW firewall"
 
 %w{ ubuntu }.each do |os|
   supports os
