@@ -22,9 +22,9 @@ include_recipe "git" if node['docker']['install_type'] == "source"
 
 package "bsdtar"
 
-include_recipe "skibum55/ufw"
 include_recipe "golang"
 include_recipe "lxc"
 include_recipe "docker::aufs"
 include_recipe "docker::#{node['docker']['install_type']}"
 include_recipe "docker::upstart"
+include_recipe "skibum55/ufw::default recipe"
