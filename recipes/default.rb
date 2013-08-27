@@ -2,7 +2,7 @@
 # Cookbook Name:: docker
 # Recipe:: default
 #
-# Copyright 2013, Brian Flad
+# Copyright 2013, Brian Flad, sk
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -22,6 +22,7 @@ include_recipe "git" if node['docker']['install_type'] == "source"
 
 package "bsdtar"
 
+include_recipe "skibum55/ufw"
 include_recipe "golang"
 include_recipe "lxc"
 include_recipe "docker::aufs"

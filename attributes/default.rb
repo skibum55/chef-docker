@@ -56,3 +56,7 @@ end
 # Source attributes
 default['docker']['source']['ref'] = "master"
 default['docker']['source']['url'] = "https://github.com/dotcloud/docker.git"
+
+# ufw firewall rules
+default['firewall']['rules'] = [{"DEFAULT_FORWARD_POLICY"=>{"ACCEPT"}}]
+default['firewall']['rules'] = [{"Docker"=> {"port"=> "4243","protocol"=> "tcp"}}]
